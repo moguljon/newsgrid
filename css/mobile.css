@@ -1,0 +1,75 @@
+/* Navigation */
+#navbar .social {
+  display: none;
+}
+
+#navbar .container {
+  grid-template-columns: 1fr;
+  grid-gap: 1.2rem;
+}
+
+#navbar .container .logo {
+  justify-self: center;
+}
+
+#navbar ul {
+  justify-self: center;
+  margin-bottom: 16px;
+}
+
+#navbar ul li a {
+  padding-right: 0.75rem;
+}
+
+/* Home Articles */
+#home-articles .articles-container {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+}
+
+#home-articles .articles-container > *:first-child {
+  grid-template-columns: 1fr;
+  grid-column: 1;
+}
+
+#home-articles .articles-container > *:last-child {
+  grid-template-columns: 1fr;
+  grid-column: 2;
+  display: none;
+}
+
+/* Cell Phones */
+@media(max-width: 600px) {
+  #showcase .container,
+  #home-articles .articles-container {
+    grid-template-columns: 1fr;
+  }
+
+  #main-footer .footer-container {
+    grid-template-columns: 1fr;
+  }
+
+  #main-footer .footer-container > *:first-child,
+  #main-footer .footer-container > *:nth-child(2) {
+    border-bottom: 1px dotted #444;
+    padding: 1rem;
+  }
+
+  #main-footer .footer-container > *:last-child {
+   grid-column: 1;
+  }
+
+  .page-container {
+    grid-template-columns: 1fr;
+  }
+
+  .page-container > *:first-child {
+    grid-row: 1;
+  }
+
+  .l-heading {
+    font-size: 2rem;
+  }
+}
